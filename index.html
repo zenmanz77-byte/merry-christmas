@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send Johnlloyd a Christmas Message 🎄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #b30000, #006400);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Snowflake animation */
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+      100% { transform: translateY(100vh) translateX(50px); opacity: 0; }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 15px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      z-index: 10;
+      position: relative;
+    }
+
+    /* Profile picture */
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid white;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      background: #ff4d4d;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #ff3333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://scontent.fcgy2-2.fna.fbcdn.net/v/t39.30808-6/480966486_1193253152165339_2122384231969607253_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFuoplHnoUA1oOxdNsGQzL5zbVAIRBsFp7NtUAhEGwWnvYgKcxYlN8iaMilrnBWyPdN1QWrOuXSGMuPXKzlBcPF&_nc_ohc=EVj3eCPzLDQQ7kNvwES8Pp7&_nc_oc=AdnKlt88W_AGqzLVaLz_8BchfZEapFZjizpyJV4-bbHYitL2d6uzNEulGjH756-oobM&_nc_zt=23&_nc_ht=scontent.fcgy2-2.fna&_nc_gid=_0YIR_gj9MHGekvmLETHzA&oh=00_Afm99Iuy84Smz6DGEvXqba_dfu_5SYSQ81QnZ9Xho70QTQ&oe=6951ADE5" alt="Johnlloyd" class="profile-pic">
+    <h2>🎄 Merry Christmas!</h2>
+    <p>Send a message to Johnlloyd 🎁</p>
+
+    <form action="https://formsubmit.co/johnlloyd42344@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <textarea name="message" placeholder="Write your Christmas message here..." required></textarea>
+
+      <input type="hidden" name="_subject" value="🎄 Christmas Message for Johnlloyd">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <button type="submit">Send Message 🎁</button>
+    </form>
+  </div>
+
+  <!-- Snowflakes -->
+  <script>
+    const snowCount = 50;
+
+    for (let i = 0; i < snowCount; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.style.width = `${Math.random() * 8 + 2}px`;
+      snowflake.style.height = snowflake.style.width;
+      snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+      snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      snowflake.style.animationDelay = `${Math.random() * 5}s`;
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+</body>
+</html>
